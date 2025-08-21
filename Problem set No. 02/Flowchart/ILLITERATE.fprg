@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="redjan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-04 04:23:04 pm"/>
+        <attribute name="created" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MDI6NTI6MTAgcG07MjkzNA=="/>
+        <attribute name="edited" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MDQ6MjM6MDQgcG07NDszMDQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalPopulation, men, women, literateMen, literateWomen, illiterateMen, illiterateWomen" type="Integer" array="False" size=""/>
+            <declare name="percentMen, percentTotalLiteracy, percentLiterateMen" type="Real" array="False" size=""/>
+            <assign variable="totalPopulation" expression="80000"/>
+            <assign variable="percentMen" expression="52.0"/>
+            <assign variable="percentTotalLiteracy" expression="48.0"/>
+            <assign variable="percentLiterateMen" expression="35.0"/>
+            <assign variable="men" expression="(percentMen / 100) * totalPopulation"/>
+            <assign variable="women" expression="totalPopulation - men"/>
+            <assign variable="literateMen" expression="(percentLiterateMen / 100) * men"/>
+            <assign variable="literateWomen" expression="(percentTotalLiteracy / 100) * women"/>
+            <assign variable="illiterateMen" expression="men - literateMen"/>
+            <assign variable="illiterateWomen" expression="women - literateWomen"/>
+            <output expression="&quot;Number Of Illiterate Men: &quot; &amp;illiterateMen" newline="True"/>
+            <output expression="&quot;Number Of Illiterate Women: &quot; &amp;illiterateWomen" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

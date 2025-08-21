@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="redjan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-04 02:51:00 pm"/>
+        <attribute name="created" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MTI6MjM6MTYgcG07MjkzOQ=="/>
+        <attribute name="edited" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MDI6NTE6MDAgcG07MjE7MzA5MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gm, sub" type="Integer" array="False" size=""/>
+            <declare name="marks, tmm, pm, tm, ag" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter The Number Of Subjects: &quot;" newline="True"/>
+            <input variable="sub"/>
+            <if expression="sub &lt;= 0">
+                <then>
+                    <output expression="&quot;Please Enter A Valid Number Of Subjects!...&quot;" newline="True"/>
+                    <breakpoint/>
+                </then>
+                <else>
+                    <for variable="gm" start="1" end="(sub)" direction="inc" step="1">
+                        <output expression="&quot;Enter The Grade Of Student&quot; &amp;gm &amp;&quot;:&quot;&amp;&quot; &quot;" newline="True"/>
+                        <input variable="marks"/>
+                    </for>
+                    <if expression="marks &lt; 0 || marks &gt; 100">
+                        <then>
+                            <output expression="&quot;Please Enter A Valid Grade!... (0-100)&quot;" newline="True"/>
+                            <breakpoint/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="tm" expression="marks"/>
+                    <assign variable="ag" expression="tm / sub"/>
+                    <assign variable="tmm" expression="sub * 100"/>
+                    <assign variable="pm" expression="tm / tmm * 100"/>
+                </else>
+            </if>
+            <output expression="&quot;The Aggregate Marks Of The Student Is: &quot; &amp;ag" newline="True"/>
+            <output expression="&quot;The Percentage Marks Of The Student Is: &quot; &amp;pm" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

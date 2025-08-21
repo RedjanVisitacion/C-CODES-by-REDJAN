@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="redjan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-04 12:23:10 pm"/>
+        <attribute name="created" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MTE6MDU6NDEgYW07MjkyMQ=="/>
+        <attribute name="edited" value="am9tYXI7TEFQVE9QLUpJOUVWM1FCOzIwMjMtMTEtMDQ7MTI6MjM6MTAgcG07MjszMDQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="km, m, f, inch, cm" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter The Distance Between Two Cities You Want To Convert In: &quot;" newline="True"/>
+            <input variable="km"/>
+            <assign variable="m" expression="km * 1000"/>
+            <assign variable="f" expression="km * 3280.84"/>
+            <assign variable="inch" expression="km * 39370.1"/>
+            <assign variable="cm" expression="km * 100000"/>
+            <output expression="&quot;METER: &quot; &amp;m" newline="True"/>
+            <output expression="&quot;FEET: &quot; &amp;f" newline="True"/>
+            <output expression="&quot;INCHES: &quot; &amp;inch" newline="True"/>
+            <output expression="&quot;CENTIMETERS: &quot; &amp;cm" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
